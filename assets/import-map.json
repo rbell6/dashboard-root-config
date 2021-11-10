@@ -1,0 +1,6 @@
+{
+	"imports": {
+		"single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+		"@apocryphal/root-config": "https://dashboard-root-config.netlify.app/apocryphal-root-config.js"
+	}
+}
