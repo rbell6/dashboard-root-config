@@ -1,14 +1,14 @@
-const path = require('path');
-const { merge } = require('webpack-merge');
-const singleSpaDefaults = require('webpack-config-single-spa');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require("path");
+const { merge } = require("webpack-merge");
+const singleSpaDefaults = require("webpack-config-single-spa");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = (webpackConfigEnv, argv) => {
-	const orgName = 'apocryphal';
+	const orgName = "apocryphal";
 	const defaultConfig = singleSpaDefaults({
 		orgName,
-		projectName: 'root-config',
+		projectName: "root-config",
 		webpackConfigEnv,
 		argv,
 		disableHtmlGeneration: true,
@@ -19,17 +19,15 @@ module.exports = (webpackConfigEnv, argv) => {
 		plugins: [
 			new HtmlWebpackPlugin({
 				inject: false,
-				template: 'src/index.ejs',
+				template: "src/index.ejs",
 				templateParameters: {
 					isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
 					orgName,
 				},
 			}),
 			new CopyWebpackPlugin({
-				patterns: [
-					{from: 'assets', to: 'assets'},
-				]
-			})
+				patterns: [{ from: "assets", to: "assets" }],
+			}),
 		],
 	});
 };
