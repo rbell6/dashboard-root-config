@@ -1,9 +1,9 @@
-import { registerApplication, start } from "single-spa";
+import { registerApplication, start } from 'single-spa';
 
 registerApplication({
-  name: "@single-spa/welcome",
-  app: () => System.import('@apocryphal/dashboard-shell'),
-  activeWhen: [() => true],
+	name: '@single-spa/welcome',
+	app: () => System.import('@apocryphal/dashboard-shell'),
+	activeWhen: [() => true],
 });
 
 // registerApplication({
@@ -13,5 +13,5 @@ registerApplication({
 // });
 
 start({
-  urlRerouteOnly: true,
+	urlRerouteOnly: true,
 });
