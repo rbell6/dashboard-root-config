@@ -1,0 +1,6 @@
+{
+	"imports": {
+		"@apocryphal/root-config": "//localhost:9000/apocryphal-root-config.js",
+		"@apocryphal/dashboard-shell": "//localhost:9001/apocryphal-dashboard-shell.js"
+	}
+}

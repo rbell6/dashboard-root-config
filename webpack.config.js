@@ -11,7 +11,7 @@ module.exports = (webpackConfigEnv, argv) => {
 		projectName: "root-config",
 		webpackConfigEnv,
 		argv,
-		disableHtmlGeneration: true,
+		// disableHtmlGeneration: true,
 	});
 
 	return merge(defaultConfig, {
