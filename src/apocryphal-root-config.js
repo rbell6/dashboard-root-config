@@ -1,7 +1,7 @@
 import { registerApplication, start } from 'single-spa';
 
 registerApplication({
-	name: '@single-spa/welcome',
+	name: '@apocryphal/dashboard-shell',
 	app: () => System.import('@apocryphal/dashboard-shell'),
 	activeWhen: [() => true],
 });
